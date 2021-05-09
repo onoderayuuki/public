@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CheeeeeseGame</title>
+    <!-- <link href='https://css.gg/play-track-prev.css' rel='stylesheet'> -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicons/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="css/game.css" />
+  </head>
+  <body>
+    <div class="outer" id="main">
+      <div class="inner">
+        <canvas id="myCanvas" width="350" height="600"></canvas>
+      </div>
+    </div>
+
+    <div id="Overlay1" class="Overlay fullOverlay">
+      <h1>Push "SpaceBar" to Start !</h1>
+    </div>
+
+    <div id="Overlay2" class="Overlay noneOverlay">
+      <h1 id="FinMessage">Clear</h1>
+      <p class="link-container">
+        <a id="RestartButton" href="game.html"></a>
+        <a id="GotoMainButton" href="main.html" class=""></a>
+      </p>
+    </div>
+
+    <!-- <span class="uk-icon" uk-icon="icon: heart">testtestttest</span> -->
+    <!-- <a class="uk-button uk-button-default" href="#">Link</a> -->
+    <!--     
+    <i class="gg-play-track-prev"></i>
+    <i class="gg-check"></i> -->
+    <!-- <script src="js/uikit-icons.js"></script> -->
+    <script src="js/game.js"></script>
+  </body>
+</html>

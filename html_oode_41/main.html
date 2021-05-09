@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CheeeeeseAchademy</title>
+    <!-- <link rel=”icon” href="img/favicons/favicon.ico"> -->
+    <link rel="icon" type="image/x-icon" href="img/favicons/favicon.ico" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/uikit.css" />
+  </head>
+  <!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+  <body>
+    <div class="uk-flex uk-flex-column wrap">
+      <header id="header" class="uk-flex-middle" uk-grid>
+        <div class="uk-width-1-3 uk-margin-left">
+          <img src="img/header_logo.png" alt="CheeseACADEMYTOKYO" />
+        </div>
+        <nav uk-navbar class="uk-width-1-2 uk-background-default">
+          <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+              <li><a href="#about">About</a></li>
+              <li><a href="#course">Course</a></li>
+              <li><a href="#news">News</a></li>
+              <li><a href="#access">Access</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#">Games</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <div class="uk-background-primary" style="height: 10px"></div>
+      <div
+        class="uk-inline uk-section uk-section-xlarge uk-section-media uk-background-cover"
+        style="background-image: url('img/mainbg.png')"
+      >
+        <div class="uk-position-top-right uk-flex uk-flex-column">
+          <!-- <h5 class="uk-margin-remove-bottom" style="color: #fffee6;">チーズ職人養成学校</h5>
+          <h3 class="uk-margin-remove-top"  id="in-image-title-01">「チーズアカデミーTOKYO」</h3> -->
+        </div>
+        <div
+          class="uk-position-center-left uk-overlay uk-overlay-default uk-background-primary uk-width-2-5"
+        >
+          <h3>#セカイを変えるチーズを作ろう</h3>
+        </div>
+      </div>
+
+      <!-- /.content -->
+      <div id="about" class="uk-section uk-section-muted">
+        <div class="uk-container uk-text-center">
+          <h3>ABOUT</h3>
+          <h4>チーズアカデミーは、チーズ職人養成学校です。</h4>
+          <p>
+            チーズの素晴らしさを、自給自足を通じて、できるだけ多くの人に知っていただきたい。
+          </p>
+          <p>
+            そして、食卓にはいつもチーズがあった、あの頃の当たり前をこの手で取り戻したい。
+          </p>
+          <p>
+            卒業後、チーズ自給自足のバックアップはもちろんのこと、チーズ職人への就職・転職もサポートします。
+          </p>
+        </div>
+      </div>
+
+      <div id="course" class="uk-section uk-section-default">
+        <div class="uk-container uk-text-center">
+          <h3>COURSE</h3>
+          <h4>
+            未経験からでもスタートができるよう、カリキュラムは多くの専門家や現役チーズ職人のアドバイスのもと、作られました。
+          </h4>
+          <div
+            class="uk-position-relative uk-visible-toggle uk-light"
+            tabindex="-1"
+            uk-slideshow="animation: pull"
+          >
+            <ul class="uk-slideshow-items">
+              <li>
+                <img src="img/about_02.jpg" alt="農地の写真" uk-cover />
+                <div
+                  class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-text-center"
+                >
+                  <h4 class="">本格的な農園を使った実地研修</h4>
+                  <p class="uk-margin-bottom">
+                    チーズアカデミーでは、本格的な農園を使った実地研修を行うことができます。<br />プロとして活躍するチーズ職人も使用するような、広大で環境も整った農園を余すところなく使い、卒業時には本格的なチーズを自分の力で作れる実践力の養成を目指します。
+                  </p>
+                </div>
+              </li>
+              <li>
+                <img src="img/about_03.jpg" alt="生産者の写真" uk-cover />
+                <div
+                  class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center"
+                >
+                  <h4 class="">必要な知識もしっかりと取得</h4>
+                  <p class="uk-margin-bottom">
+                    チーズ作りには、しっかりとした食に関する知識が欠かせません。<br />チーズアカデミーでは、一流講師陣による、チーズ作りに必要ないろはを余すところなく学べます。<br />チーズそのものでなく、栄養学全般を学ぶことも可能ですので、チーズ以外への展開も夢ではないでしょう。
+                  </p>
+                </div>
+              </li>
+              <li>
+                <img
+                  src="img/about_01.jpg"
+                  alt="チーズビュッフェの写真"
+                  uk-cover
+                />
+                <div
+                  class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center"
+                >
+                  <h4 class="">卒業制作はティスティング審査あり</h4>
+                  <p class="uk-margin-bottom">
+                    チーズアカデミーでは最後の2ヶ月間で卒業制作を実施。<br />卒業制作として、チーズ作りを実際に行います。<br />卒業後、一般参加によるティスティング審査があるため、作り手の目線だけでなく、消費者の目線から、卒業制作作品としてのチーズを、しっかりと評価いただくことができます。
+                  </p>
+                </div>
+              </li>
+            </ul>
+
+            <a
+              class="uk-position-center-left uk-position-small uk-hidden-hover"
+              href="#"
+              uk-slidenav-previous
+              uk-slideshow-item="previous"
+            ></a>
+            <a
+              class="uk-position-center-right uk-position-small uk-hidden-hover"
+              href="#"
+              uk-slidenav-next
+              uk-slideshow-item="next"
+            ></a>
+            <div class="uk-position-bottom-center uk-position-small">
+              <ul class="uk-dotnav">
+                <li uk-slideshow-item="0"><a href="#">Item 1</a></li>
+                <li uk-slideshow-item="1"><a href="#">Item 2</a></li>
+                <li uk-slideshow-item="2"><a href="#">Item 3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="news" class="content uk-section uk-section-muted">
+        <div class="uk-container uk-text-center">
+          <h3>NEWS</h3>
+          <div class="uk-flex uk-flex-around">
+            <div class="uk-card uk-card-default uk-card-body uk-width-1-3">
+              <img
+                class="uk-border-circle"
+                width="250"
+                height="250"
+                src="img/about_04.jpg"
+                alt="ピザの写真"
+              />
+              <p>2016/11/18</p>
+              <p>
+                チーズアカデミー卒業生のコスゲさんによるチーズだけをふんだんに使用した話題のピザ屋
+                「KosugePizza」が渋谷でオープンしました！
+              </p>
+            </div>
+            <div class="uk-card uk-card-default uk-card-body uk-width-1-3">
+              <img
+                class="uk-border-circle"
+                width="250"
+                height="250"
+                src="img/about_04.jpg"
+                alt="チーズゲームの写真"
+              />
+              <p>2021/05/09</p>
+              <p>チーズアカデミー在校生によるチーズゲームが公開されました。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="access" class="content uk-section uk-section-default">
+        <div class="uk-container uk-text-center">
+          <h3 class="">ACCESS</h3>
+          <div class="uk-flex-middle" uk-grid>
+            <iframe
+              class="uk-width-1-3 uk-height-medium"
+              src="https://maps.google.co.jp/maps?output=embed&q=東京都港区北青山3-5-6"
+            ></iframe>
+            <table
+              class="uk-width-1-2 uk-table uk-text-left uk-margin-large-left"
+            >
+              <tbody>
+                <tr>
+                  <td>学校名</td>
+                  <td>チーズアカデミーTOKYO</td>
+                </tr>
+                <tr>
+                  <td>所在地</td>
+                  <td>〒107-0061 東京都港区北青山3-5-6 青朋ビル2F</td>
+                </tr>
+                <tr>
+                  <td>TEL</td>
+                  <td>03-5413-5045</td>
+                </tr>
+                <tr>
+                  <td>FAX</td>
+                  <td>03-5413-5046</td>
+                </tr>
+                <tr>
+                  <td>MAIL</td>
+                  <td>dummy@cheeseacademy.tokyo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact" class="uk-section uk-section-muted">
+        <div class="uk-container uk-text-center">
+          <h3 class="">Contact</h3>
+          <p>
+            ぜひ1度、足を運んでみませんか。説明会は随時開催中。<br />その他、お問い合わせもお気軽にどうぞ。お待ちしております。
+          </p>
+          <div class="uk-flex-middle" uk-grid>
+            <div class="uk-width-2-3 uk-text-left">
+              <form>
+                <fieldset class="uk-fieldset">
+                  <legend class="uk-legend">
+                    説明会お申し込み・お問い合わせ
+                  </legend>
+
+                  <div class="uk-margin">
+                    <label class="uk-form-label" for="form-name">お名前</label>
+                    <input
+                      class="uk-input"
+                      type="text"
+                      id="form-name"
+                      placeholder="チーズ太郎"
+                    />
+                  </div>
+                  <div class="uk-margin">
+                    <label class="uk-form-label" for="form-kana">カナ</label>
+                    <input
+                      class="uk-input"
+                      type="text"
+                      id="form-kana"
+                      placeholder="チーズタロウ"
+                    />
+                  </div>
+                  <div class="uk-margin">
+                    <label class="uk-form-label" for="form-mail"
+                      >メールアドレス</label
+                    >
+                    <input
+                      class="uk-input"
+                      type="text"
+                      id="form-mail"
+                      placeholder="mail@co.jp"
+                    />
+                  </div>
+                  <div class="uk-margin">
+                    <label class="uk-form-label" for="form-inflow"
+                      >チーズアカデミーを知ったきっかけ</label
+                    >
+                    <select class="uk-select" id="form-inflow">
+                      <option>google検索</option>
+                      <option>SNS</option>
+                      <option>紹介</option>
+                      <option>たまたま通りかかった</option>
+                      <option>その他</option>
+                    </select>
+                  </div>
+
+                  <div class="uk-form-label">志望動機選択肢</div>
+                  <div
+                    class="uk-margin uk-grid-small uk-child-width-auto uk-grid"
+                  >
+                    <label
+                      ><input
+                        class="uk-checkbox"
+                        type="checkbox"
+                      />起業をしたい</label
+                    >
+                    <label
+                      ><input
+                        class="uk-checkbox"
+                        type="checkbox"
+                      />チーズ系企業に就職・転職したい</label
+                    >
+                    <label
+                      ><input
+                        class="uk-checkbox"
+                        type="checkbox"
+                      />チーズと関わる仕事をしており、仕事に生かしたい</label
+                    >
+                    <label
+                      ><input
+                        class="uk-checkbox"
+                        type="checkbox"
+                        checked
+                      />チーズの教養を身につけたい</label
+                    >
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+
+            <div
+              class="uk-width-1-4 uk-background-primary uk-padding uk-margin-xlarge-left"
+            >
+              <p>
+                チーズアカデミーは実際には存在しません。<br />間違っても問い合わせしないよう<br />お願いいたします。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="" uk-totop></a>
+      <!-- /#footer -->
+      <footer class="footer uk-section-secondary">
+        <p class="uk-padding">
+          copyrights 2016 Cheeese Academy Tokyo All RIghts Reserved.
+        </p>
+      </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- UIkit CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" /> -->
+
+    <!-- UIkit JS -->
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+  </body>
+</html>
