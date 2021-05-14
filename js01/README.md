@@ -1,4 +1,5 @@
 # 01-JAVASCRIPT課題
+![image (1)](https://user-images.githubusercontent.com/38471145/118314472-25f78180-b52f-11eb-8e1f-d8a11eff39e8.png)
 
 ## 概要・操作方法
  - タイプライターのような操作感で文字入力ができます。
