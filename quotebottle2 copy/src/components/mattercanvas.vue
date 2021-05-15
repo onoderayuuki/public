@@ -86,11 +86,11 @@ export default {
         if (pair.bodyA.id == "aaa") {
           //衝突した要素のIDは取得できている
           let pickid = pair.bodyB.id;
-          console.log(pickid);
+          console.log(`落下した物体のID：${pickid}`);
           //これをdataに定義している変数に渡そうとするとエラー
           // canvasの中しか参照できない？
-          // this.showID = pickid[0];
-          // console.log(this.showID);
+          this.showID = pickid[0];
+          console.log(this.showID);
         }
       });
     });
