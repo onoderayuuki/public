@@ -16,10 +16,21 @@
 ## 残課題
  - タイピングゲーム要素（≒ジャンケンアプリ）を足す
  - 入力した物がPDFで出せると良い
- - 背景やタイプライターの種類、フォントなどを選べるように
+ - 背景やタイプライターの種類、フォントなどを選べるように  
 ## 感想
   -  可愛いので気に入っていますその２。
   -  物理的な相互作用の感覚を追求できた点が満足  
   - タイピングゲーム要素の実装を放棄したのでジャンケンアプリのお題からは離れ過ぎてしまったかな。
 ## 参考
-- あとで書く
+- タイピングゲーム
+http://www.programmingtheworld.com/index.php/2020/03/22/javascript-typing-game/
+https://www.sejuku.net/blog/92667
+https://novicengineering.com/javascript_typinggame/
+- 配列処理
+https://maku77.github.io/js/array/loop.html
+- 再起関数
+https://www.javadrive.jp/javascript/function/index15.html
+- 素材
+https://www.pakutaso.com/20200630170post-28026.html
+https://www.ac-illust.com/main/detail.php?id=1726987&word=%E3%82%BF%E3%82%A4%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BF%E3%83%BC&searchId=2186886034
+https://tools4music.info/audio-editor/audio-speed-changer
