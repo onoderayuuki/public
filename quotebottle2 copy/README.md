@@ -1,4 +1,8 @@
-# quotebottle2
+# 質問用簡易版
+- VUEーCLIでプロジェクトを作成
+- Canvas操作のためにmatter.jsを使っている https://brm.io/matter-js/
+
+- matter.jsのイベント内からVUEの変数を書き換えたい
 
 ## Project setup
 ```
