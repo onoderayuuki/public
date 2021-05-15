@@ -89,7 +89,7 @@ export default {
           console.log(`落下した物体のID：${pickid}`);
           //これをdataに定義している変数に渡そうとするとエラー
           // canvasの中しか参照できない？
-          this.showID = pickid[0];
+          this.showID = pickid;
           console.log(this.showID);
         }
       });
