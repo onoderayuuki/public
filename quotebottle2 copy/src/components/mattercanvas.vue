@@ -78,6 +78,7 @@ export default {
     //要素を投下
     this.World.add(this.world, this.Bodies.rectangle(100, 100, 20, 20,{ id : 99}));
 
+let self =this;
     //衝突した要素のIDを取ってVueのdataに渡したい
     this.Event.on(this.engine, "collisionStart", function (event) {
       let pairs = event.pairs; //衝突物がpairs配列に入る
@@ -89,8 +90,8 @@ export default {
           console.log(`落下した物体のID：${pickid}`);
           //これをdataに定義している変数に渡そうとするとエラー
           // canvasの中しか参照できない？
-          this.showID = pickid;
-          console.log(this.showID);
+          self.$parent.showID = pickid;
+          console.log(self);
         }
       });
     });
