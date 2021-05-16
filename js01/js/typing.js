@@ -6,12 +6,6 @@ let paper_height = 100;
 let paper_top = 260;
 let defaultHTML = "";
 
-window.onload = function () {
-  defaultHTML = document.body.innerHTML; // 初期HTML記述をセット
-  init();
-  document.addEventListener("keydown", judgKey);
-};
-
 //関数
 function init() {
   document.body.innerHTML = defaultHTML;
@@ -106,7 +100,7 @@ function lineFeed() {
     createNextP();
     //ハイライトの移動
     document.getElementById("down_audio").play();
-  const log = document.getElementById("log");
+    const log = document.getElementById("log");
 
     clearHighlight(log.textContent);
     downHighlight(log.textContent);
@@ -130,7 +124,7 @@ function downHighlight(logText) {
   // Spanタグを次のpへ移動：ハイライトを動かす
   nextP.classList.add("wait"); //文字が透明に変わる
   nextP.innerHTML =
-  logText +
+    logText +
     "<span id='log'></span><span id='highlight' class='highlight-on'>_</span>";
 }
 
@@ -164,3 +158,9 @@ function moveleftHighlight() {
     waitFLG = false;
   }, waittime);
 }
+
+window.onload = function () {
+  defaultHTML = document.body.innerHTML; // 初期HTML記述をセット
+  init();
+  document.addEventListener("keydown", judgKey);
+};
