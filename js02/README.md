@@ -1,6 +1,7 @@
 # 02-JAVASCRIPT課題
 
 ![js02](https://user-images.githubusercontent.com/38471145/119167925-572a0180-ba9b-11eb-9cf9-0d7af1d6d847.gif)
+<img width="862" alt="スクリーンショット 2021-05-22 1 23 39" src="https://user-images.githubusercontent.com/38471145/119168989-7a08e580-ba9c-11eb-9b35-8ac4a0e2ea1e.png">
 
 ## 概要・操作方法
  - Slack風にメモや参考サイトのURLを書き残せる
