@@ -1,5 +1,5 @@
 # 02-JAVASCRIPT課題
-
+https://onoderayuuki.github.io/public/js02/SLGKmemo.html
 ## 概要・操作方法
  - Slack風にメモや参考サイトのURLを書き残せる
    - URLの概要を勝手に表示してくれる
