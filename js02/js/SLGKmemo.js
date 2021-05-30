@@ -38,7 +38,7 @@ let todoStorage = {
 };
 
 //Vueインスタンス
-new Vue({
+let app =new Vue({
   el: "#app",
   components: {
     LinkPrevue: window.LinkPrevue.default,
