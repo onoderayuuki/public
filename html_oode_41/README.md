@@ -1,4 +1,6 @@
 # 00-HTMLCSS課題
+![image](https://user-images.githubusercontent.com/38471145/120218568-e772fe00-c274-11eb-8266-c64718fac06c.png)
+   - https://onoderayuuki.github.io/public/html_oode_41/
 ## 概要・操作方法
  - チーズアカデミー選抜試験（笑）をイメージしてネズミがチーズを食べるブロック崩しゲームをクリアしてからサイトに入るようにしてみました。
  - ゲームはスペースキーで開始、左右キーで操作できます。
@@ -6,7 +8,6 @@
  - 通常のチーズアカデミーサイトにgameタブを設けていますので、そこからゲームに戻ることができます。
 ## 工夫した点
  - index.htmlから自動リダイレクトするようにしたので以下のアドレスで開始できる（game.htmlとmain.htmlとファイル名をつけてしまったので苦し紛れ）
-   - https://onoderayuuki.github.io/public/html_oode_41/
  - game部分は以下のサイトを参考にしつつ、ブロックやボールを画像に変更したり、ボールが微妙に回転するギミックを加えたり、ブロック（＝チーズ）の表示がランダムになるようにするなどオリジナリティを加えてみた。
    - 特に元のコードのボール描画を画像に差し替えたため打ち返し判定の起点が中心→右上になったロジックを
    - https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
