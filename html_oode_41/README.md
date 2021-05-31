@@ -1,5 +1,5 @@
 # 00-HTMLCSS課題
-![image](https://user-images.githubusercontent.com/38471145/120218568-e772fe00-c274-11eb-8266-c64718fac06c.png)
+![120218568-e772fe00-c274-11eb-8266-c64718fac06c](https://user-images.githubusercontent.com/38471145/120218783-3456d480-c275-11eb-8a47-6e98c4242092.png)
    - https://onoderayuuki.github.io/public/html_oode_41/
 ## 概要・操作方法
  - チーズアカデミー選抜試験（笑）をイメージしてネズミがチーズを食べるブロック崩しゲームをクリアしてからサイトに入るようにしてみました。
