@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handtrack</title>
+    <style>
+      canvas {
+        border: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- リアルタイム検出を停止するためのボタン -->
+    <button id="stop">ストップ</button><br />
+
+    <video id="myvideo" width="48" height="32"></video>
+    <canvas id="mycanvas" width="480" height="320"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/handtrackjs@0.0.13/dist/handtrack.min.js"></script>
+    <script>
+      // window.onload = () => {
+      //   const video = document.querySelector("#myvideo");
+      //   const canvas = document.querySelector("#mycanvas");
+      //   const ctx = canvas.getContext("2d");
+
+      //   // const se     = document.querySelector('#se');
+
+      //   /** カメラ設定 */
+      //   const constraints = {
+      //     audio: false,
+      //     video: {
+      //       width: 300,
+      //       height: 200,
+      //       facingMode: "user", // フロントカメラを利用する
+      //       // facingMode: { exact: "environment" }  // リアカメラを利用する場合
+      //     },
+      //   };
+
+      //   /**
+      //    * カメラを<video>と同期
+      //    */
+      //   navigator.mediaDevices
+      //     .getUserMedia(constraints)
+      //     .then((stream) => {
+      //       video.srcObject = stream;
+      //       video.onloadedmetadata = (e) => {
+      //         video.play();
+      //       };
+      //     })
+      //     .catch((err) => {
+      //       console.log(err.name + ": " + err.message);
+      //     });
+
+      //   // const ctx = canvas.getContext("2d");
+      //   let shot = function () {
+      //     console.log("ok");
+      //     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      //   };
+      //   setInterval(shot, 300);
+
+    //     /**
+    //      * シャッターボタン
+    //      */
+    //     document.querySelector("#stop").addEventListener("click", () => {
+    //       // 演出的な目的で一度映像を止めてSEを再生する
+    //       // video.pause();  // 映像を停止
+    //       // se.play();      // シャッター音
+    //       // setTimeout( () => {
+    //       //   video.play();    // 0.5秒後にカメラ再開
+    //       // }, 500);
+    //       // canvasに画像を貼り付ける
+    //       // ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    //     });
+    //   };
+    </script>
+    <script type="module">
+      const canvas = document.getElementById("mycanvas");
+      const ctx = canvas.getContext("2d");
+      const video = document.getElementById("myvideo");
+
+      const options = {
+        flipHorizontal: false, // 水平方向の反転
+        maxNumBoxes: 1, // 検出するボックスの最大数
+        scoreThreshold: 0.6, // 予測信頼度のしきい値
+      };
+
+      let state = true;
+      let predictions;
+      let myimg;
+      const model = await handTrack.load();
+
+      document.getElementById("stop").addEventListener("click", stopEvent);
+
+      ctx.font = "18pt Arial";
+      ctx.fillText("モデル読込中...", 50, 50);
+
+      // Webカメラを起動する
+      const status = await handTrack.startVideo(video);
+      if (status) {
+        var startTime = new Date().getTime(); //描画開始時刻を取得
+        drawRect(10,10);
+        startDetection();
+      } else {
+        console.log("ビデオエラーが検出されました...", status);
+      }
+
+      // const constraints = {
+      //     audio: false,
+      //     video: {
+      //       width: 300,
+      //       height: 200,
+      //       facingMode: "user", // フロントカメラを利用する
+      //       // facingMode: { exact: "environment" }  // リアカメラを利用する場合
+      //     },
+      //   };
+
+        /**
+         * カメラを<video>と同期
+         */
+        // navigator.mediaDevices
+        //   .getUserMedia(constraints)
+        //   .then((stream) => {
+        //     video.srcObject = stream;
+        //     video.onloadedmetadata = (e) => {
+        //       video.play();
+        //     };
+        //   })
+        //   .catch((err) => {
+        //     console.log(err.name + ": " + err.message);
+        //   });
+
+        // const ctx = canvas.getContext("2d");
+        // let shot = function () {
+          // console.log("ok");
+          // myimg = ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        // };
+        // setInterval(shot, 300);
+
+
+      // 「手」の検出と結果の出力を繰り返し実行する
+      function startDetection() {
+        // predictions = model.detect(video);
+        model.detect(video).then((predictions) => {
+          // model.renderPredictions(predictions, canvas, ctx, video);
+          const prediction = predictions[0];
+          console.log(prediction);
+
+          if (prediction == null) {
+          } else {
+            // console.log(prediction.bbox[0]); //x
+            // console.log(prediction.bbox[1]); //y
+            let x = prediction.bbox[0]; //x
+            let y = prediction.bbox[1]; //y
+            //とりあえず連動して描画できるようになった
+            drawRect(x,y);
+          }
+
+          //時間をはかる
+          var currentTime = new Date().getTime(); //経過時刻を取得
+          var time = currentTime - startTime; // 描画開始時刻から経過時刻を引く
+          console.log(time);
+          startTime = currentTime; // 大体3000ミリ秒くらい
+          // if (state) requestAnimationFrame(startDetection);
+          setInterval(startDetection,500);
+        });
+      }
+      function drawRect(x,y){
+        ctx.clearRect(0,0,480,320);
+        ctx.fillRect(x,y, 30, 30);
+      }
+
+      // 停止ボタンが押された時にリアルタイム検出の処理を中断する
+      function stopEvent() {
+        handTrack.stopVideo(video);
+        state = false;
+      }
+    </script>
+  </body>
+</html>

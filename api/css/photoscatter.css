@@ -1,0 +1,66 @@
+body {
+  /* background-color: antiquewhite; */
+  position: relative;
+}
+header {
+  display: flex;
+  align-items: center;  
+  justify-content: space-between;
+}
+button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  width: 150px;
+}
+
+button img {
+  display: block;
+}
+button:active,
+button img {
+  position: relative;
+}
+.back-change-button {
+  /* border:solid #fff; */
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-size: 40px 40px;
+}
+.cork {
+  background-image: url("../img/colk.jpg");
+}
+.mokume {
+  background-image: url("../img/mokume.jpg");
+}
+.kokuban {
+  background-image: url("../img/kokuban.jpg");
+}
+.white {
+  background-image: url("../img/white.jpg");
+}
+.container {
+  position: absolute;
+}
+.polaroid {
+  position: relative;
+  /* width: 100px; */
+  display: inline-block;
+  /* margin: 20px; */
+}
+.polaroid img {
+  border: 10px solid #fff;
+  border-bottom: 45px solid #fff;
+  box-shadow: 3px 3px 3px #777;
+}
+.polaroid p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #888;
+}

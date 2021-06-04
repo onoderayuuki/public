@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>PhotoScatter</title>
+    <link rel="stylesheet" href="css/sanitize.css" />
+    <link rel="stylesheet" href="css/photoscatter.css" />
+  </head>
+  <body style="background-image: url('./img/kokuban.jpg')">
+    <template>
+      <div
+        class="container"
+        draggable="true"
+        ondragstart="dragstart_handler(event,this)"
+        ondragend="setPosition(event,this)"
+        ondrag="setPosition(event,this)"
+      >
+        <div class="polaroid">
+          <p>Angerme</p>
+          <img src="" alt="photo" draggable="false" />
+        </div>
+      </div>
+    </template>
+
+    <header>
+      <div>
+        <p
+          class="back-change-button"
+          style="background-image: url('./img/colk.jpg')"
+        ></p>
+        <p
+          class="back-change-button"
+          style="background-image: url('./img/kokuban.jpg')"
+        ></p>
+        <p
+          class="back-change-button"
+          style="background-image: url('./img/mokume.jpg')"
+        ></p>
+        <p
+          class="back-change-button"
+          style="background-image: url('./img/white.jpg')"
+        ></p>
+      </div>
+      <div>
+        <button id="authorize-button" style="display: none">
+          <img
+            src="./img/btn_google_signin_light_normal_web.png"
+            alt="authorize"
+          />
+        </button>
+        <button id="signout-button" style="display: none">
+          <img src="./img/signout.png" alt="sign out" />
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div id="board" onDragOver="dragover_handler(event)"></div>
+    </main>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="src/component/date.js"></script>
+    <script src="src/component/photoscatter.js"></script>
+    <script src="src/component/backgroud.js"></script>
+    <script
+      async
+      defer
+      src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()"
+    ></script>
+  </body>
+</html>
+
