@@ -3,6 +3,9 @@ https://onoderayuuki.github.io/public/js02/SLGKmemo.html
 ## 概要・操作方法
  - Slack風にメモや参考サイトのURLを書き残せる
    - URLの概要を勝手に表示してくれる
+<img width="250" alt="スクリーンショット 2021-06-03 13 39 14" src="https://user-images.githubusercontent.com/38471145/120588086-86fce000-c471-11eb-90e7-6aaa5cde3862.png">
+<img width="250" alt="スクリーンショット 2021-06-03 13 38 52" src="https://user-images.githubusercontent.com/38471145/120587963-48672580-c471-11eb-8316-bb29f23e9e56.png">
+
  - 右上のボタンでGoogleKeep風のレイアウトに早変わり
 
 ![js02](https://user-images.githubusercontent.com/38471145/119167925-572a0180-ba9b-11eb-9cf9-0d7af1d6d847.gif)
