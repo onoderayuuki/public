@@ -1,5 +1,9 @@
 # API
 ## 概要・操作方法
+ - 起動 
+   - npm install
+   - simple-server
+   - http://localhost:3000/
  - Google Photoの写真を架空の黒板（コルクボード、テーブル）上にぶちまけて利用できる（photoscatter.html）
  - 背景画像を入れ替えられる 
 ## 工夫した点
