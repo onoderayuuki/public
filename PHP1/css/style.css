@@ -1,0 +1,241 @@
+@charset "UTF-8";
+
+html,
+body {
+  background-color: #f0f0f0;
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+}
+body,
+a {
+  color: #0b2d5d;
+  /* color: #91837c; */
+}
+
+/*----------------
+ * common structure
+ *-----------------*/
+.wrapper {
+  max-width: 1148px;
+  margin: 0 auto;
+}
+.flex-parent {
+  display: flex;
+  display: -webkit-flex;
+}
+.flex-right {
+  justify-content: flex-end;
+}
+.sidebar {
+  max-width: 181px;
+  margin-right: 126px;
+}
+.wrapper-main {
+  flex: 1;
+}
+/*----------------
+ * ヘッダー
+ *-----------------*/
+.header {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #0b2d5d;
+  color: #fff9b0;
+  font-size: 24px;
+}
+
+.header a {
+  color: #fff9b0;
+}
+.outer {
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+/*----------------
+ * 商品リスト上ソートエリア
+ *-----------------*/
+.sort-area {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+}
+
+.sort-list {
+  display: flex;
+}
+.sort-detail {
+  display: flex;
+}
+.sort-item > a {
+  padding: 6px 24px;
+  text-decoration: underline;
+}
+.pager {
+  /* margin-top: -23px; */
+  display: flex;
+  justify-content: center;
+}
+.pager-item {
+  float: left;
+}
+.pager-item:last-child {
+  margin-left: 10px;
+}
+.pager-item > a {
+  display: block;
+  margin-right: 6px;
+  padding: 5px 8px;
+  border-bottom: dotted 1px #0b2d5d;
+  font-size: 1.6rem;
+}
+
+/*----------------
+ * サイドバー
+ *-----------------*/
+.search-form {
+  position: relative;
+}
+.search-box {
+  appearance: none;
+  box-sizing: border-box;
+  border: solid 1px rgba(232, 232, 232, 0.3);
+  background-color: rgba(252, 250, 250, 0.3);
+  width: 200px;
+  padding: 10px 4px 10px 20px;
+  font-size: 1.4rem;
+}
+.search-submit {
+  display: block;
+  position: absolute;
+  right: 4px;
+  top: 10px;
+  width: 21px;
+  height: 21px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url(../images/common/icon-search.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+.category-item > a {
+  display: block;
+  margin-bottom: 15px;
+  padding-bottom: 6px;
+  border-bottom: solid 1px #9e9e9e;
+  font-size: 1.8rem;
+  color: #242424;
+}
+/*----------------
+ * 商品リスト
+ *-----------------*/
+/* .products-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.products-item {
+  flex-basis: 33.333%;
+  max-width: 260px;
+  box-sizing: border-box;
+  margin-bottom: 35px;
+  padding: 10px;
+  list-style: none;
+  text-align: center;
+}
+.pruducts-thumb {
+  margin-bottom: 30px;
+}
+
+.products-title {
+  margin: 10px 0;
+  font-size: 21px;
+  text-align: center;
+}
+
+.products-price {
+  margin-bottom: 20px;
+  padding: 0 10px;
+  font-size: 16px;
+  color: #f00;
+  text-align: center;
+} */
+
+.cards_list {
+	width:1050px;
+  margin-left:30px;
+  column-count: 5;
+  column-gap: 3px;
+}
+
+.cards_list > a {
+display: inline-block;
+  width: 200px;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 5%;
+}
+.images_box {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+/*----------------
+ * common footer
+ *-----------------*/
+.footer {
+  padding-top: 20px;
+  background: #242424;
+}
+.wrapper-footer {
+  display: flex;
+}
+
+.footer-widget {
+  width: 19.5%;
+}
+.footer-widget__long {
+  width: 25.6%;
+}
+.nav-footer__item > a {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 1.8rem;
+  text-decoration: underline;
+  color: #fff;
+}
+.copyrights {
+  padding: 20px 0;
+  font-size: 1.8rem;
+  color: #fff;
+  text-align: center;
+}
+.social-list {
+  display: flex;
+  padding-left: 15px;
+  align-items: center;
+}
+.social-item {
+  margin-right: 30px;
+}
+
+
+#plus-area {
+  border: #0b2d5d;
+  background-color: #0b2d5d;
+  color: #fff9b0;
+  font-size: 32px;
+  font-weight: bold;
+  width: 200px;
+  height: 62px;
+  text-align: center;
+  padding-top: 30px;
+  /* vertical-align: middle; */
+}
